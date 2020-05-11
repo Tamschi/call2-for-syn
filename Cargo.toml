@@ -1,0 +1,22 @@
+[package]
+name = "call2-for-syn"
+description = "Apply parser functions to proc-macro2 token streams"
+version = "1.0.0" # Also update README.md (in multiple places) and html_root_url.
+authors = ["Tamme Schichler <tamme@schichler.dev>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/Tamschi/call2-for-syn"
+documentation = "https://docs.rs/call2-for-syn"
+categories = ["development-tools::procedural-macro-helpers"]
+keywords = ["proc-macro2", "syn"]
+
+[dependencies]
+proc-macro2 = "1.0.8"
+syn = { version = "1.0.14", default-features = false, features = ["parsing"] }
+
+[dev-dependencies]
+quote = "1.0.2"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"] # No target differences.
