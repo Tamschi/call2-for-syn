@@ -10,6 +10,7 @@ repository = "https://github.com/Tamschi/call2-for-syn"
 documentation = "https://docs.rs/call2-for-syn"
 categories = ["development-tools::procedural-macro-helpers"]
 keywords = ["proc-macro2", "syn"]
+publish = false
 
 [dependencies]
 proc-macro2 = "1.0.8"
