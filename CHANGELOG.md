@@ -4,6 +4,7 @@
 
 * Greatly simplified implementation
 * Added meta data
+* Documented [panic](https://github.com/Tamschi/call2-for-syn/issues/1)
 
 ## 1.0.0
 

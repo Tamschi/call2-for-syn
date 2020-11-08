@@ -12,6 +12,14 @@ pub mod readme {
 
 /// Analogous to [`syn::parse2`] and [`syn::parse::ParseBuffer::call`].
 ///
+/// # Panics
+///
+/// Iff `parser` doesn't consume all of `input`.
+///
+/// > This was originally [a bug](https://github.com/Tamschi/call2-for-syn/issues/1).
+/// >
+/// > I recommend using version 2 or later of this crate instead, once available.
+///
 /// # Example
 ///
 /// ```rust
@@ -37,6 +45,7 @@ pub mod readme {
 ///
 /// [`syn::parse2`]: https://docs.rs/syn/1.0.14/syn/fn.parse2.html
 /// [`syn::parse::ParseBuffer::call`]: https://docs.rs/syn/1.0.14/syn/parse/struct.ParseBuffer.html#method.call
+#[track_caller]
 pub fn call2<T, P: FnOnce(ParseStream) -> T>(input: TokenStream, parser: P) -> T {
 	let mut result: Option<T> = None;
 	Parser::parse2(
