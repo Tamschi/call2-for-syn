@@ -1,6 +1,8 @@
 # call2-for-syn Changelog
 
-## ..next
+## ..1
+
+2020-11-08
 
 * Greatly simplified implementation
 * Added meta data

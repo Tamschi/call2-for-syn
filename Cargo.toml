@@ -1,13 +1,13 @@
 [package]
 name = "call2-for-syn"
-version = "1.0.0" # Also update README.md (in multiple places) and html_root_url.
+version = "1.0.1"
 authors = ["Tamme Schichler <tamme@schichler.dev>"]
 edition = "2018"
 description = "Apply parser functions to proc-macro2 token streams"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Tamschi/call2-for-syn"
-homepage = "https://github.com/Tamschi/call2-for-syn/tree/v1.0.0"
-documentation = "https://docs.rs/call2-for-syn/1.0.0"
+homepage = "https://github.com/Tamschi/call2-for-syn/tree/v1.0.1"
+documentation = "https://docs.rs/call2-for-syn/1.0.1"
 keywords = ["proc-macro2", "syn"]
 categories = ["development-tools::procedural-macro-helpers"]
 readme = "README.md"
