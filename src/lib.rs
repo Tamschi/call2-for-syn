@@ -1,4 +1,4 @@
-#![doc(html_root_url = "https://docs.rs/call2-for-syn/1.0.1")]
+#![doc(html_root_url = "https://docs.rs/call2-for-syn/1.0.2")]
 #![forbid(unsafe_code)]
 #![warn(clippy::pedantic)]
 
@@ -45,7 +45,7 @@ pub mod readme {
 ///
 /// [`syn::parse2`]: https://docs.rs/syn/1.0.14/syn/fn.parse2.html
 /// [`syn::parse::ParseBuffer::call`]: https://docs.rs/syn/1.0.14/syn/parse/struct.ParseBuffer.html#method.call
-#[track_caller]
+#[rustversion::attr(since(1.46), track_caller)]
 pub fn call2<T, P: FnOnce(ParseStream) -> T>(input: TokenStream, parser: P) -> T {
 	let mut result: Option<T> = None;
 	Parser::parse2(
