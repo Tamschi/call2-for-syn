@@ -1,4 +1,4 @@
-#![doc(html_root_url = "https://docs.rs/call2-for-syn/1.0.1")]
+#![doc(html_root_url = "https://docs.rs/call2-for-syn/1.0.2")]
 #![forbid(unsafe_code)]
 #![warn(clippy::pedantic)]
 

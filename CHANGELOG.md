@@ -1,8 +1,8 @@
 # call2-for-syn Changelog
 
-## ..next
+## ..2
 
-TODO: Date
+2020-11-08
 
 * Fixes:
   * Only apply `#[track_caller]` on Rust 1.46 or later
