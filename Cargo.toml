@@ -1,13 +1,13 @@
 [package]
 name = "call2-for-syn"
-version = "1.0.3"
+version = "2.0.3"
 authors = ["Tamme Schichler <tamme@schichler.dev>"]
 edition = "2018"
 description = "Apply parser functions to proc-macro2 token streams"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Tamschi/call2-for-syn"
-homepage = "https://github.com/Tamschi/call2-for-syn/tree/v1.0.3"
-documentation = "https://docs.rs/call2-for-syn/1.0.3"
+homepage = "https://github.com/Tamschi/call2-for-syn/tree/v2.0.3"
+documentation = "https://docs.rs/call2-for-syn/2.0.3"
 keywords = ["proc-macro2", "syn"]
 categories = ["development-tools::procedural-macro-helpers"]
 readme = "README.md"
@@ -22,7 +22,7 @@ include = [
 ]
 
 [badges]
-travis-ci = { repository = "Tamschi/call2-for-syn", branch = "v1" }
+travis-ci = { repository = "Tamschi/call2-for-syn", branch = "v2" }
 is-it-maintained-issue-resolution = { repository = "Tamschi/call2-for-syn" }
 is-it-maintained-open-issues = { repository = "Tamschi/call2-for-syn" }
 maintenance = { status = "passively-maintained" }
@@ -37,6 +37,7 @@ cargo-husky = "1.5.0"
 doc-comment = "0.3.3"
 git_info = "0.1.2"
 quote = "1.0.2"
+unquote = "0.0.2"
 version-sync = "0.9.1"
 
 [package.metadata.docs.rs]

@@ -5,8 +5,8 @@
 [![Docs.rs](https://docs.rs/call2-for-syn/badge.svg)](https://docs.rs/crates/call2-for-syn)
 
 ![Rust 1.40.0](https://img.shields.io/static/v1?logo=Rust&label=&message=1.40.0&color=grey)
-[![Build Status](https://travis-ci.com/Tamschi/call2-for-syn.svg?branch=v1)](https://travis-ci.com/Tamschi/call2-for-syn/branches)
-![Crates.io - License](https://img.shields.io/crates/l/call2-for-syn/1.0.3)
+[![Build Status](https://travis-ci.com/Tamschi/call2-for-syn.svg?branch=v2)](https://travis-ci.com/Tamschi/call2-for-syn/branches)
+![Crates.io - License](https://img.shields.io/crates/l/call2-for-syn/2.0.3)
 
 [![GitHub](https://img.shields.io/static/v1?logo=GitHub&label=&message=%20&color=grey)](https://github.com/Tamschi/call2-for-syn)
 [![open issues](https://img.shields.io/github/issues-raw/Tamschi/call2-for-syn)](https://github.com/Tamschi/call2-for-syn/issues)
@@ -26,24 +26,51 @@ cargo add call2-for-syn
 ## Example
 
 ```rust
-use {
-    call2_for_syn::call2,
-    quote::quote,
-    syn::{Ident, Token},
-};
+use call2_for_syn::{call2_allow_incomplete, call2_strict};
+use quote::quote;
+use syn::{ext::IdentExt as _, Ident, Token};
+use unquote::unquote;
 
-let (hello, world) = call2::<syn::Result<_>, _>(
-    quote!(Hello world!),
+let (now, is) = call2_strict(
+    quote!(Now is...),
     |input| {
-        let hello: Ident = input.parse()?;
-        let world: Ident = input.parse()?;
-        input.parse::<Token![!]>()?;
-        Ok((hello, world))
+        let now: Ident = input.parse()?;
+        let is: Ident = input.parse()?;
+        // input.parse::<Token![!]>()?;
+        syn::Result::Ok((now, is))
+    },
+).unwrap_err().parsed.unwrap(); // Use ? here in a real program.
+
+assert_eq!(format!("{}", now), "Now");
+assert_eq!(format!("{}", is), "is");
+
+let (a, good, time) = call2_strict(
+    quote!(...a good time...),
+    |input| {
+        let a: Ident;
+        let good: Ident;
+        let time: Ident;
+        unquote!(input, ... #a #good #time ...);
+        syn::Result::Ok((a, good, time))
+    },
+).unwrap().unwrap(); // Use ? here in a real program.
+
+assert_eq!(format!("{}", a), "a");
+assert_eq!(format!("{}", good), "good");
+assert_eq!(format!("{}", time), "time");
+
+let (r#for, parsing) = call2_allow_incomplete(
+    quote!(for parsing!),
+    |input| {
+        let r#for = input.call(Ident::parse_any)?;
+        let parsing: Ident = input.parse()?;
+        // input.parse::<Token![!]>()?;
+        syn::Result::Ok((r#for, parsing))
     },
 ).unwrap(); // Use ? here in a real program.
 
-assert_eq!(format!("{}", hello), "Hello");
-assert_eq!(format!("{}", world), "world");
+assert_eq!(format!("{}", r#for), "for");
+assert_eq!(format!("{}", parsing), "parsing");
 ```
 
 ## License

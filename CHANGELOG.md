@@ -1,5 +1,17 @@
 # call2-for-syn Changelog
 
+<!-- markdownlint-disable no-trailing-punctuation -->
+
+## 2..
+
+2020-11-09
+
+* Reworked this crate's API to be considerably more useful and not quite as trivial
+
+  Migrate from `call2` to `call2_strict` if you expect to consume all input. Otherwise, migrate to `call2_allow_incomplete`.
+
+* Improved README
+
 ## ..3
 
 2020-11-09
