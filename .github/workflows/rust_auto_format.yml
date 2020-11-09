@@ -2,9 +2,9 @@ name: Rust Auto Format
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ develop, v1-maintenance ]
   pull_request:
-    branches: [ develop ]
+    branches: [ develop, v1-maintenance ]
 
 env:
   CARGO_TERM_COLOR: always

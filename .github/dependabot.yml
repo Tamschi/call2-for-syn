@@ -16,3 +16,22 @@ updates:
       - "Tamschi"
     reviewers:
       - "Tamschi"
+
+  - package-ecosystem: "cargo"
+    target-branch: "v1-maintenance"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "Tamschi"
+    reviewers:
+      - "Tamschi"
+  - package-ecosystem: "github-actions"
+    target-branch: "v1-maintenance"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "Tamschi"
+    reviewers:
+      - "Tamschi"
