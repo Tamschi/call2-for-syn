@@ -1,5 +1,13 @@
 # call2-for-syn Changelog
 
+## ..3
+
+2020-11-09
+
+* Properly simplified implementation
+
+  This isn't really justified in being a crate anymore (see the new v1 code being one line), but it exists, so I'll maintain it.
+
 ## ..2
 
 2020-11-08
