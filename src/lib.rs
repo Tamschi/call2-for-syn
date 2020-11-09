@@ -47,14 +47,5 @@ pub mod readme {
 /// [`syn::parse::ParseBuffer::call`]: https://docs.rs/syn/1.0.14/syn/parse/struct.ParseBuffer.html#method.call
 #[rustversion::attr(since(1.46), track_caller)]
 pub fn call2<T, P: FnOnce(ParseStream) -> T>(input: TokenStream, parser: P) -> T {
-	let mut result: Option<T> = None;
-	Parser::parse2(
-		|input: ParseStream| {
-			result = Some(parser(input));
-			Ok(())
-		},
-		input,
-	)
-	.unwrap();
-	result.unwrap()
+	Parser::parse2(|input: ParseStream| Ok(parser(input)), input).unwrap()
 }
