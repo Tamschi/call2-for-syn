@@ -1,8 +1,10 @@
 # call2-for-syn Changelog
 
-## next
+<!-- markdownlint-disable no-trailing-punctuation -->
 
-TODO: Date
+## 2..
+
+2020-11-09
 
 * Reworked this crate's API to be considerably more useful and not quite as trivial
 
