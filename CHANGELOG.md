@@ -1,8 +1,8 @@
 # call2-for-syn Changelog
 
-## ..next
+## ..3
 
-TODO: Date
+2020-11-09
 
 * Properly simplified implementation
 
