@@ -5,7 +5,7 @@
 [![Docs.rs](https://docs.rs/call2-for-syn/badge.svg)](https://docs.rs/crates/call2-for-syn)
 
 ![Rust 1.40.0](https://img.shields.io/static/v1?logo=Rust&label=&message=1.40.0&color=grey)
-[![Build Status](https://travis-ci.com/Tamschi/call2-for-syn.svg?branch=develop)](https://travis-ci.com/Tamschi/call2-for-syn/branches)
+[![CI](https://github.com/Tamschi/call2-for-syn/workflows/CI/badge.svg?branch=develop)](https://github.com/Tamschi/call2-for-syn/actions?query=workflow%3ACI+branch%3Adevelop)
 ![Crates.io - License](https://img.shields.io/crates/l/call2-for-syn/2.0.3)
 
 [![GitHub](https://img.shields.io/static/v1?logo=GitHub&label=&message=%20&color=grey)](https://github.com/Tamschi/call2-for-syn)
