@@ -2,9 +2,9 @@
 
 [![Lib.rs](https://img.shields.io/badge/Lib.rs-*-84f)](https://lib.rs/crates/call2-for-syn)
 [![Crates.io](https://img.shields.io/crates/v/call2-for-syn)](https://crates.io/crates/call2-for-syn)
-[![Docs.rs](https://docs.rs/call2-for-syn/badge.svg)](https://docs.rs/crates/call2-for-syn)
+[![Docs.rs](https://docs.rs/call2-for-syn/badge.svg)](https://docs.rs/call2-for-syn)
 
-![Rust 1.40.0](https://img.shields.io/static/v1?logo=Rust&label=&message=1.40.0&color=grey)
+![Rust 1.40](https://img.shields.io/static/v1?logo=Rust&label=&message=1.40&color=grey)
 [![CI](https://github.com/Tamschi/call2-for-syn/workflows/CI/badge.svg?branch=develop)](https://github.com/Tamschi/call2-for-syn/actions?query=workflow%3ACI+branch%3Adevelop)
 ![Crates.io - License](https://img.shields.io/crates/l/call2-for-syn/2.0.3)
 
