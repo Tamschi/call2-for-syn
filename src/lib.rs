@@ -71,7 +71,12 @@ pub fn call2_allow_incomplete<T, P: FnOnce(ParseStream) -> T>(input: TokenStream
 		input,
 	)
 	.ok();
-	result.unwrap()
+	match result {
+		Some(result) => result,
+		None => {
+			unreachable!()
+		}
+	}
 }
 
 /// Analogous to [`syn::parse2`] and [`syn::parse::ParseBuffer::call`].
