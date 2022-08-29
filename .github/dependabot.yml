@@ -40,13 +40,3 @@ updates:
     labels:
       - "type: upkeep"
       - "domain: Rust"
-
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    assignees:
-      - "Tamschi"
-    labels:
-      - "type: upkeep"
-      - "domain: GitHub Actions"
