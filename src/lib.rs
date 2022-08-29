@@ -178,6 +178,6 @@ impl<T: Debug> Error for Incomplete<T> {
 
 impl<T> Display for Incomplete<T> {
 	fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
-		write!(f, "TokenStream parsed incompleteley")
+		write!(f, "TokenStream parsed incompletely")
 	}
 }
