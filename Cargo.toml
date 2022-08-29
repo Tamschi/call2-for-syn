@@ -17,15 +17,17 @@ include = [
 	"Cargo.toml",
 	"CHANGELOG.md",
 	"CODE_OF_CONDUCT.md",
+	"COPYRIGHT.md",
 	"LICENSE-*",
 	"README.md",
+	"SECURITY.md",
 ]
 publish = false
 
 [badges]
 is-it-maintained-issue-resolution = { repository = "Tamschi/call2-for-syn" }
 is-it-maintained-open-issues = { repository = "Tamschi/call2-for-syn" }
-maintenance = { status = "experimental" }
+maintenance = { status = "experimental" } # This may differ between branches.
 
 [dependencies]
 proc-macro2 = "1.0.8"
@@ -34,12 +36,11 @@ syn = { version = "1.0.14", default-features = false, features = ["parsing"] }
 
 [dev-dependencies]
 cargo-husky = "1.5.0"
-doc-comment = "0.3.3"
 git_info = "0.1.2"
 quote = "1.0.2"
 unquote = "0.0.6"
-version-sync = "0.9.1"
-wasm-bindgen-test = "0.3.23"
+version-sync = "0.9.3"
+wasm-bindgen-test = "0.3.28"
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"] # No target differences.

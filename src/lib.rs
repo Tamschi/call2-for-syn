@@ -1,6 +1,12 @@
+//! This library provides a `call2` function that sits somewhere in-between `syn`'s `parse2` and `ParseBuffer::call`:
+//! It lets you conveniently apply a parser function to a `proc-macro2` token stream, for example from a `quote!`.
+//!
+//! [![Zulip Chat](https://img.shields.io/endpoint?label=chat&url=https%3A%2F%2Fiteration-square-automation.schichler.dev%2F.netlify%2Ffunctions%2Fstream_subscribers_shield%3Fstream%3Dproject%252Fcall2-for-syn)](https://iteration-square.schichler.dev/#narrow/stream/project.2Fcall2-for-syn)
+
 #![doc(html_root_url = "https://docs.rs/call2-for-syn/2.0.3")]
+#![warn(clippy::pedantic, missing_docs)]
+#![allow(clippy::semicolon_if_nothing_returned)]
 #![forbid(unsafe_code)]
-#![warn(clippy::pedantic)]
 
 use proc_macro2::TokenStream;
 use std::{
@@ -11,9 +17,8 @@ use std::{
 use syn::parse::{ParseStream, Parser};
 
 #[cfg(doctest)]
-pub mod readme {
-	doc_comment::doctest!("../README.md");
-}
+#[doc = include_str!("../README.md")]
+mod readme {}
 
 /// Analogous to [`syn::parse2`] and [`syn::parse::ParseBuffer::call`].
 ///

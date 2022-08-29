@@ -14,6 +14,8 @@ fn weak_assert_branch() {
 		} else if branch == "(no branch)" {
 			// Most likely a release tag.
 			eprintln!(r#"Branch assert ignored: "(no branch)""#)
+		} else if branch == "template" {
+			eprintln!("Branch assert ignored: Currently on template branch")
 		} else if branch.contains('-') || branch.contains('/') {
 			eprintln!("Branch assert ignored: Probably a feature branch")
 		} else {
@@ -112,6 +114,17 @@ fn pulls() {
 		"README.md",
 		&format!(
 			r"^\[!\[open pull requests\]\(https://img\.shields\.io/github/issues-pr-raw/{0}/{{name}}\)\]\(https://github\.com/{0}/{{name}}/pulls\)$",
+			USER,
+		)
+	);
+}
+
+#[test]
+fn good_first_issues() {
+	version_sync::assert_contains_regex!(
+		"README.md",
+		&format!(
+			r"^\[!\[good first issues\]\(https://img\.shields\.io/github/issues-raw/{0}/{{name}}/good%20first%20issue\?label=good\+first\+issues\)\]\(https://github\.com/{0}/{{name}}/contribute\)$",
 			USER,
 		)
 	);
