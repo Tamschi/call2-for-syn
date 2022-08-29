@@ -22,7 +22,6 @@ dependencies = [
  "git_info",
  "proc-macro2",
  "quote",
- "rustversion",
  "syn",
  "unquote",
  "version-sync",

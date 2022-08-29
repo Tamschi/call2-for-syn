@@ -133,7 +133,7 @@ pub fn call2_allow_incomplete<T, P: FnOnce(ParseStream) -> T>(input: TokenStream
 ///
 /// [`syn::parse2`]: https://docs.rs/syn/1.0.14/syn/fn.parse2.html
 /// [`syn::parse::ParseBuffer::call`]: https://docs.rs/syn/1.0.14/syn/parse/struct.ParseBuffer.html#method.call
-#[rustversion::attr(since(1.46), track_caller)]
+#[track_caller]
 pub fn call2_strict<T, P: FnOnce(ParseStream) -> T>(
 	input: TokenStream,
 	parser: P,
@@ -146,9 +146,9 @@ pub fn call2_strict<T, P: FnOnce(ParseStream) -> T>(
 		},
 		input,
 	) {
-		Ok(()) => Ok(parsed.unwrap()),
+		Ok(()) => Ok(parsed.expect("infallible")),
 		Err(syn_error) => Err(Incomplete {
-			parsed: parsed.unwrap(),
+			parsed: parsed.expect("infallible"),
 			syn_error,
 		}),
 	}

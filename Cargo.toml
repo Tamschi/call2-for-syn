@@ -31,7 +31,6 @@ maintenance = { status = "experimental" } # This may differ between branches.
 
 [dependencies]
 proc-macro2 = "1.0.8"
-rustversion = "1.0.4"
 syn = { version = "1.0.14", default-features = false, features = ["parsing"] }
 
 [dev-dependencies]
