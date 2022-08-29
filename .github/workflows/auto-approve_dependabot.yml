@@ -12,7 +12,7 @@ jobs:
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: auto-approve
-        uses: actions/github-script@v4.0.2
+        uses: actions/github-script@v6.2.0
         with:
           github-token: ${{secrets.AUTO_APPROVE_DEPENDABOT_TOKEN}}
           script: |
