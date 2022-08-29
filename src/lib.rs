@@ -164,7 +164,9 @@ pub type Result<T> = stdResult<T, Incomplete<T>>;
 /// [`call2_strict`]: ./fn.call2_strict.html
 #[derive(Debug, Clone)]
 pub struct Incomplete<T> {
+	/// The parsed instance.
 	pub parsed: T,
+	/// The [`Error`](syn::Error) raised because not all input was parsed.
 	pub syn_error: syn::Error,
 }
 
