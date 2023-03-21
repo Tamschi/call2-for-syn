@@ -22,7 +22,7 @@ dependencies = [
  "git_info",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.4",
  "unquote",
  "version-sync",
  "wasm-bindgen-test",
@@ -36,7 +36,7 @@ checksum = "abe198907637ba191a05037eabf6a1e81ce35617ea282ab091009f22664fd433"
 dependencies = [
  "proc-macro2",
  "rustversion",
- "syn",
+ "syn 1.0.109",
 ]
 
 [[package]]
@@ -132,9 +132,9 @@ checksum = "d4fd5641d01c8f18a23da7b6fe29298ff4b55afcccdf78973b24cf3175fee32e"
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.43"
+version = "1.0.52"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0a2ca2c61bc9f3d74d2886294ab7b9853abd9c1ad903a3ac7815c58989bb7bab"
+checksum = "1d0e1ae9e836cc3beddd63db0df682593d7e2d3d891ae8c9083d2113e1744224"
 dependencies = [
  "unicode-ident",
 ]
@@ -200,12 +200,22 @@ checksum = "0f747710de3dcd43b88c9168773254e809d8ddbdf9653b84e2554ab219f17860"
 
 [[package]]
 name = "syn"
-version = "1.0.99"
+version = "1.0.109"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "58dbef6ec655055e20b86b15a8cc6d439cca19b667537ac6a1369572d151ab13"
+checksum = "72b64191b275b66ffe2469e8af2c1cfe3bafa67b529ead792a6d0160888b4237"
 dependencies = [
  "proc-macro2",
  "quote",
+ "unicode-ident",
+]
+
+[[package]]
+name = "syn"
+version = "2.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2c622ae390c9302e214c31013517c2061ecb2699935882c60a9b37f82f8625ae"
+dependencies = [
+ "proc-macro2",
  "unicode-ident",
 ]
 
@@ -272,7 +282,7 @@ dependencies = [
  "call2-for-syn 2.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 1.0.109",
 ]
 
 [[package]]
@@ -297,7 +307,7 @@ dependencies = [
  "pulldown-cmark",
  "regex",
  "semver",
- "syn",
+ "syn 1.0.109",
  "toml",
  "url",
 ]
@@ -329,7 +339,7 @@ dependencies = [
  "once_cell",
  "proc-macro2",
  "quote",
- "syn",
+ "syn 1.0.109",
  "wasm-bindgen-shared",
 ]
 
@@ -363,7 +373,7 @@ checksum = "5be8e654bdd9b79216c2929ab90721aa82faf65c48cdf08bdc4e7f51357b80da"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 1.0.109",
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]

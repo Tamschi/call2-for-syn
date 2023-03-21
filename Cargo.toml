@@ -31,7 +31,7 @@ maintenance = { status = "experimental" } # This may differ between branches.
 
 [dependencies]
 proc-macro2 = "1.0.8"
-syn = { version = "1.0.14", default-features = false, features = ["parsing"] }
+syn = { version = "2.0.4", default-features = false, features = ["parsing"] }
 
 [dev-dependencies]
 cargo-husky = "1.5.0"
