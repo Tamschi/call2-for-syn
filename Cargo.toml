@@ -22,7 +22,7 @@ include = [
 	"README.md",
 	"SECURITY.md",
 ]
-publish = false
+publish = true
 
 [badges]
 is-it-maintained-issue-resolution = { repository = "Tamschi/call2-for-syn" }
