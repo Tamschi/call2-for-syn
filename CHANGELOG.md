@@ -2,9 +2,12 @@
 
 <!-- markdownlint-disable no-trailing-punctuation -->
 
-## 2..next
+## 3..4
 
-TODO: Date
+2023-08-26
+
+* Breaking changes:
+  * Updated `syn` dependency to `2.0.29`
 
 * Revisions:
   * Updated `unquote` dev dependency

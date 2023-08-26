@@ -1,13 +1,13 @@
 [package]
 name = "call2-for-syn"
-version = "2.0.3"
+version = "3.0.4"
 authors = ["Tamme Schichler <tamme@schichler.dev>"]
 edition = "2018"
 description = "Apply parser functions to proc-macro2 token streams"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Tamschi/call2-for-syn"
-homepage = "https://github.com/Tamschi/call2-for-syn/tree/v2.0.3"
-documentation = "https://docs.rs/call2-for-syn/2.0.3"
+homepage = "https://github.com/Tamschi/call2-for-syn/tree/v3.0.4"
+documentation = "https://docs.rs/call2-for-syn/3.0.4"
 keywords = ["proc-macro2", "syn"]
 categories = ["development-tools::procedural-macro-helpers"]
 readme = "README.md"
@@ -31,13 +31,12 @@ maintenance = { status = "experimental" } # This may differ between branches.
 
 [dependencies]
 proc-macro2 = "1.0.8"
-syn = { version = "1.0.14", default-features = false, features = ["parsing"] }
+syn = { version = "2.0.29", default-features = false, features = ["parsing"] }
 
 [dev-dependencies]
 cargo-husky = "1.5.0"
 git_info = "0.1.2"
 quote = "1.0.2"
-unquote = "0.0.6"
 version-sync = "0.9.3"
 wasm-bindgen-test = "0.3.28"
 

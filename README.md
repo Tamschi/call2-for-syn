@@ -6,7 +6,7 @@
 
 ![Rust 1.54](https://img.shields.io/static/v1?logo=Rust&label=&message=1.54&color=grey)
 [![CI](https://github.com/Tamschi/call2-for-syn/workflows/CI/badge.svg?branch=develop)](https://github.com/Tamschi/call2-for-syn/actions?query=workflow%3ACI+branch%3Adevelop)
-![Crates.io - License](https://img.shields.io/crates/l/call2-for-syn/2.0.3)
+![Crates.io - License](https://img.shields.io/crates/l/call2-for-syn/3.0.4)
 
 [![GitHub](https://img.shields.io/static/v1?logo=GitHub&label=&message=%20&color=grey)](https://github.com/Tamschi/call2-for-syn)
 [![open issues](https://img.shields.io/github/issues-raw/Tamschi/call2-for-syn)](https://github.com/Tamschi/call2-for-syn/issues)

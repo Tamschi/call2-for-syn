@@ -3,7 +3,7 @@
 //!
 //! [![Zulip Chat](https://img.shields.io/endpoint?label=chat&url=https%3A%2F%2Fiteration-square-automation.schichler.dev%2F.netlify%2Ffunctions%2Fstream_subscribers_shield%3Fstream%3Dproject%252Fcall2-for-syn)](https://iteration-square.schichler.dev/#narrow/stream/project.2Fcall2-for-syn)
 
-#![doc(html_root_url = "https://docs.rs/call2-for-syn/2.0.3")]
+#![doc(html_root_url = "https://docs.rs/call2-for-syn/3.0.4")]
 #![warn(clippy::pedantic, missing_docs)]
 #![allow(clippy::semicolon_if_nothing_returned)]
 #![forbid(unsafe_code)]
@@ -16,6 +16,8 @@ use std::{
 };
 use syn::parse::{ParseStream, Parser};
 
+//FIXME: Reenable this once there's a Syn 2 version of unquote.
+#[cfg(all(never, not(never)))]
 #[cfg(doctest)]
 #[doc = include_str!("../README.md")]
 mod readme {}
@@ -134,6 +136,7 @@ pub fn call2_allow_incomplete<T, P: FnOnce(ParseStream) -> T>(input: TokenStream
 /// [`syn::parse2`]: https://docs.rs/syn/1.0.14/syn/fn.parse2.html
 /// [`syn::parse::ParseBuffer::call`]: https://docs.rs/syn/1.0.14/syn/parse/struct.ParseBuffer.html#method.call
 #[track_caller]
+#[allow(clippy::missing_panics_doc)]
 pub fn call2_strict<T, P: FnOnce(ParseStream) -> T>(
 	input: TokenStream,
 	parser: P,
